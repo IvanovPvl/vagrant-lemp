@@ -15,9 +15,9 @@ echo "Installing MySQL"
 sudo apt-get -y install mysql-server
 
 echo "Creating database and user"
-mysql -uroot -ppass -e "create database blog";
+mysql -uroot -ppass -e "create database webapp";
 mysql -uroot -ppass -e "CREATE USER 'webapp'@'localhost' IDENTIFIED BY 'password'";
-mysql -uroot -ppass -e "GRANT ALL PRIVILEGES ON blog.* TO 'webapp'@'localhost'";
+mysql -uroot -ppass -e "GRANT ALL PRIVILEGES ON webapp* TO 'webapp'@'localhost'";
 
 echo "Updating PHP repository"
 sudo apt-get install -y python-software-properties
